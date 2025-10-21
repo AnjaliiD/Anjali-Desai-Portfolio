@@ -793,6 +793,13 @@ nav {
     background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 25%, #45b7d1 50%, #4ecdc4 75%, #ff6b6b 100%);
     background-size: 400% 400%;
     animation: gradientBorder 6s ease-in-out infinite;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.about-image-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(78, 205, 196, 0.25);
 }
 
 .about-image {
@@ -802,6 +809,11 @@ nav {
     object-fit: cover;
     display: block;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+    filter: brightness(1.05);
 }
 
 @keyframes gradientBorder {
@@ -851,9 +863,10 @@ nav {
 }
 
 .tech-item:hover {
-    background: rgba(78, 205, 196, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2);
+    background: rgba(78, 205, 196, 0.25);
+    border-color: #4ecdc4;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.25);
 }
 
 /* Academics Section - Timeline design */
@@ -1976,4 +1989,5 @@ footer {
 html { scroll-behavior: smooth; }
 
 * { cursor: auto; }
+
 a, button { cursor: pointer; }
