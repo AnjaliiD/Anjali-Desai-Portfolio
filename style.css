@@ -314,13 +314,14 @@ nav {
 
 /* Hero Section - New design with animations */
 .hero {
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
     overflow: hidden;
+    padding: 6rem 0 3rem 0;
 }
 
 .hero::before {
@@ -352,7 +353,7 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    height: 100%;
+    width: 100%;
 }
 
 .hero-image-container {
@@ -360,7 +361,7 @@ nav {
     opacity: 0;
     transform: translateY(50px);
     animation: floatUp 1.5s ease 0.5s forwards;
-    height: 90vh;
+    max-height: 80vh;
     display: flex;
     align-items: flex-end;
 }
@@ -394,11 +395,10 @@ nav {
     color: white;
     flex: 1;
     padding-left: 1rem;
-    padding-top: 8rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 70vh;
     gap: 2rem;
 }
 
@@ -1991,3 +1991,4 @@ html { scroll-behavior: smooth; }
 * { cursor: auto; }
 
 a, button { cursor: pointer; }
+
