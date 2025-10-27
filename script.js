@@ -335,3 +335,45 @@ if (viewMoreBtn) {
         }
     });
 }
+
+// Intersection Observer for About Section
+const aboutObserverOptions = {
+    threshold: 0.2, // Trigger when 20% of element is visible
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add 'visible' class to trigger animations
+            entry.target.classList.add('visible');
+            
+            // If it's the about-right section, animate tech items with stagger
+            if (entry.target.classList.contains('about-right')) {
+                const techItems = entry.target.querySelectorAll('.tech-item');
+                techItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, 1300 + (index * 50)); // Stagger by 50ms each
+                });
+            }
+            
+            // Stop observing once animated (optional - remove if you want to re-animate on scroll up)
+            aboutObserver.unobserve(entry.target);
+        }
+    });
+}, aboutObserverOptions);
+
+// Observe about section elements
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutLeft = document.querySelector('.about-left');
+    const aboutRight = document.querySelector('.about-right');
+    
+    if (aboutLeft) {
+        aboutObserver.observe(aboutLeft);
+    }
+    
+    if (aboutRight) {
+        aboutObserver.observe(aboutRight);
+    }
+});
