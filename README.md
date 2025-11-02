@@ -43,6 +43,7 @@ Anjali-Desai-Portfolio/
 ├── style.css               # All styling and animations
 ├── script.js               # Interactive functionality
 ├── README.md               # Project documentation
+├── LICENSE                 # MIT License
 ├── cert_pdf/               # PDF certificates and resume
 │   ├── Anjali_Desai_Resume.pdf
 │   ├── Brown-Certificate.pdf
