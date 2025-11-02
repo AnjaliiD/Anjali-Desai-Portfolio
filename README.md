@@ -124,6 +124,10 @@ This site is deployed using **GitHub Pages**. To deploy your own version:
 3. Select `main` branch as source
 4. Your site will be live at `https://[username].github.io/Anjali-Desai-Portfolio/`
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Contact
 
 - **Email**: anjali.desai0111@gmail.com
