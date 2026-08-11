@@ -266,7 +266,7 @@ if (contactForm) {
         const message = document.getElementById('message').value;
         
         // Simple mailto fallback
-        window.location.href = `mailto:anjali.desai0111@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;                
+        window.location.href = `mailto:anjalidesai0111@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;                
         // Clear form
         contactForm.reset();
     });
