@@ -2146,3 +2146,63 @@ html { scroll-behavior: smooth; }
 * { cursor: auto; }
 
 a, button { cursor: pointer; }
+
+/* Inline links inside timeline and activity descriptions */
+.timeline-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.4);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-link:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.activity-link {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.4);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.activity-link:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Respect users who prefer reduced motion:
+   calm the always-on animations while keeping all intro content visible.
+   Many intro elements start at opacity:0 and animate/observe their way in,
+   so they are explicitly forced back to a visible state here. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .hero-image-container,
+    .hero-subtitle,
+    .hero-stat-item,
+    .hero-school-info,
+    .hero-contact,
+    .about-left,
+    .about-right,
+    .about-title,
+    .about-text,
+    .tech-item,
+    .timeline-item,
+    .project-card,
+    .activity-list-item,
+    .certification-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
