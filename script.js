@@ -205,10 +205,10 @@ window.addEventListener('load', () => {
 
 // Start rolling counter animations
 setTimeout(() => {
-    animateRollingCounter('grade-tens-roll', 1, 1500); // Show "1" for grade 11
-    animateRollingCounter('grade-ones-roll', 1, 1700); // Show "1" for grade 11
-    animateRollingCounter('age-tens-roll', 1, 1800);   // Show "1" for age 16
-    animateRollingCounter('age-ones-roll', 6, 2000);   // Show "6" for age 16
+    animateRollingCounter('grade-tens-roll', 1, 1500); // Show "1" for grade 12
+    animateRollingCounter('grade-ones-roll', 2, 1700); // Show "2" for grade 12
+    animateRollingCounter('age-tens-roll', 1, 1800);   // Show "1" for age 17
+    animateRollingCounter('age-ones-roll', 7, 2000);   // Show "7" for age 17
 }, 0);
 
     // Start particle generation
